@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<meta content="mobile_blank" name="shell-type">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+        font-family: 'Inter', sans-serif;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-[#F9FAFB] text-[#111827] flex flex-col min-h-screen pt-safe pb-safe">
+<main class="flex-1 flex flex-col justify-between w-full max-w-md mx-auto px-[20px] py-4">
+<!-- Top & Form Content -->
+<div class="flex flex-col">
+<!-- Clean Top Bar -->
+<div class="flex items-center justify-between pt-2">
+<a aria-label="Go back" href="{{DATA:SCREEN:SCREEN_30}}" class="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-gray-200 text-gray-700 shadow-sm active:scale-95 transition-transform"><span class="material-symbols-outlined text-[20px]">arrow_back</span></a>
+<!-- Language Selector Pill -->
+<div class="flex items-center bg-gray-100 rounded-full p-1 border border-gray-200">
+<button class="px-2.5 py-1 rounded-full bg-[#111827] text-white text-[12px] font-semibold" type="button">EN</button>
+<button class="px-2.5 py-1 rounded-full text-gray-500 text-[12px] font-medium hover:text-gray-900 transition-colors" type="button">தமிழ்</button>
+<button class="px-2.5 py-1 rounded-full text-gray-500 text-[12px] font-medium hover:text-gray-900 transition-colors" type="button">മലയാളം</button>
+</div>
+</div>
+<!-- Header Section -->
+<div class="mt-6">
+<h1 class="text-[26px] font-bold text-[#111827] tracking-tight leading-tight text-left">Create your Sports ID</h1>
+<p class="text-[16px] text-gray-500 text-left mt-2 mb-6">Enter your mobile number to get started.</p>
+</div>
+<!-- Main Input Card (24px spacing from top, 8px grid spacing inside) -->
+<div class="bg-white rounded-2xl p-4 border border-gray-200 shadow-sm space-y-6">
+<!-- Mobile Number Section -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<label class="text-[14px] font-medium text-gray-500 uppercase tracking-wide">Registered Mobile Number</label>
+<button class="text-[14px] text-[#FF6B1A] font-semibold hover:underline" type="button">Edit</button>
+</div>
+<!-- Prefilled Input Card -->
+<div class="h-[52px] px-3.5 flex items-center justify-between bg-gray-50 border border-gray-200 rounded-xl">
+<div class="flex items-center space-x-2.5">
+<!-- Flag Vector -->
+<div class="w-6 h-4 rounded-[2px] overflow-hidden flex flex-col shadow-sm border border-gray-200/50">
+<div class="h-1/3 bg-[#FF9933] w-full"></div>
+<div class="h-1/3 bg-white w-full flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-[#000080]"></div>
+</div>
+<div class="h-1/3 bg-[#128807] w-full"></div>
+</div>
+<span class="text-[16px] text-[#111827] font-semibold tracking-wide">+91 98765 43210</span>
+</div>
+<!-- Verification checkmark -->
+<span class="material-symbols-outlined text-green-600 text-[20px]">check_circle</span>
+</div>
+</div>
+<!-- 6-Digit OTP Code Section -->
+<div class="space-y-2">
+<div class="flex items-center justify-between">
+<span class="text-[14px] font-semibold text-gray-700 uppercase tracking-wide">Enter 6-Digit Code</span>
+<span class="text-[12px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">SMS SENT</span>
+</div>
+<!-- 6 OTP Boxes with 8px gap -->
+<div class="grid grid-cols-6 gap-2 w-full pt-1" id="otp-container">
+<div class="h-14 flex items-center justify-center rounded-xl bg-gray-50 border border-gray-200 text-[#111827] text-[20px] font-bold shadow-sm">
+              4
+            </div>
+<div class="h-14 flex items-center justify-center rounded-xl bg-gray-50 border border-gray-200 text-[#111827] text-[20px] font-bold shadow-sm">
+              8
+            </div>
+<div class="h-14 flex items-center justify-center rounded-xl bg-gray-50 border border-gray-200 text-[#111827] text-[20px] font-bold shadow-sm">
+              2
+            </div>
+<div class="h-14 flex items-center justify-center rounded-xl bg-gray-50 border border-gray-200 text-[#111827] text-[20px] font-bold shadow-sm">
+              1
+            </div>
+<div class="h-14 flex items-center justify-center rounded-xl bg-gray-50 border border-gray-200 text-[#111827] text-[20px] font-bold shadow-sm">
+              9
+            </div>
+<div class="h-14 flex items-center justify-center rounded-xl bg-gray-50 border border-gray-200 text-[#111827] text-[20px] font-bold shadow-sm">
+              0
+            </div>
+</div>
+<!-- Resend Timer State -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center space-x-1.5 text-gray-500 text-[14px]">
+<span class="material-symbols-outlined text-[16px] text-gray-400">schedule</span>
+<span class="">Resend OTP in <span class="font-semibold text-gray-800" id="countdown-timer">19s</span></span>
+</div>
+<button class="text-[14px] text-gray-400 font-medium cursor-not-allowed opacity-70" id="resend-btn" type="button">Resend now</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Actions Container (24px whitespace above) -->
+<div class="space-y-4 pt-6 pb-2">
+<!-- Primary Athletic Button (56px tall, full-width, bg-[#FF6B1A]) -->
+<a href="{{DATA:SCREEN:SCREEN_26}}" class="w-full h-[56px] bg-[#FF6B1A] text-white font-semibold text-[16px] rounded-2xl flex items-center justify-center space-x-2 shadow-md active:scale-[0.98] transition-transform"><span class="">Verify &amp; Continue</span><span class="material-symbols-outlined text-[20px]">arrow_forward</span></a>
+<!-- Secondary Text Link -->
+<div class="flex justify-center">
+<button class="text-[16px] text-gray-600 font-medium hover:text-[#111827] transition-colors" type="button">
+          Continue with email
+        </button>
+</div>
+<!-- Privacy Note -->
+<p class="text-[14px] text-gray-400 text-center">
+        Your phone number stays private.
+      </p>
+</div>
+</main>
+<script>
+    (function() {
+      let timeLeft = 22;
+      const timerElem = document.getElementById('countdown-timer');
+      const resendBtn = document.getElementById('resend-btn');
+      if (timerElem) {
+        const interval = setInterval(function() {
+          if (timeLeft <= 1) {
+            clearInterval(interval);
+            timerElem.textContent = '0s';
+            if (resendBtn) {
+              resendBtn.classList.remove('opacity-70', 'cursor-not-allowed', 'text-gray-400');
+              resendBtn.classList.add('text-[#FF6B1A]', 'cursor-pointer');
+            }
+          } else {
+            timeLeft -= 1;
+            timerElem.textContent = timeLeft + 's';
+          }
+        }, 1000);
+      }
+    })();
+  </script>
+
+
+</body></html>

@@ -1,0 +1,42 @@
+{
+  "common": {
+    "appName": "Sports ID",
+    "language": "ഭാഷ",
+    "english": "English",
+    "tamil": "தமிழ்",
+    "malayalam": "മലയാളം",
+    "continue": "തുടരുക",
+    "submit": "സമർപ്പിക്കുക",
+    "back": "തിരികെ",
+    "loading": "ലഭ്യമാക്കുന്നു...",
+    "save": "സേവ് ചെയ്യുക",
+    "cancel": "റദ്ദാക്കുക",
+    "logout": "ലോഗ് ഔട്ട്"
+  },
+  "languageSelect": {
+    "title": "നിങ്ങളുടെ ഭാഷ തിരഞ്ഞെടുക്കുക",
+    "subtitle": "Sports ID പ്ലാറ്റ്‌ഫോമിനായി നിങ്ങളുടെ മുൻഗണനാ ഭാഷ തിരഞ്ഞെടുക്കുക",
+    "enLabel": "English",
+    "taLabel": "தமிழ் (Tamil)",
+    "mlLabel": "മലയാളം (Malayalam)"
+  },
+  "auth": {
+    "title": "Sports ID-ലേക്ക് സ്വാഗതം",
+    "subtitle": "സൈൻ അപ്പ് ചെയ്യാനോ ലോഗിൻ ചെയ്യാനോ നിങ്ങളുടെ മൊബൈൽ നമ്പറോ ഇമെയിലോ നൽകുക",
+    "emailOrPhoneLabel": "മൊബൈൽ നമ്പർ അല്ലെങ്കിൽ ഇമെയിൽ",
+    "emailOrPhonePlaceholder": "ഉദാ: +91 98765 43210 അല്ലെങ്കിൽ athlete@example.com",
+    "sendOtp": "OTP കോഡ് അയക്കുക",
+    "enterOtpTitle": "സ്ഥിരീകരണ കോഡ് നൽകുക",
+    "enterOtpSubtitle": "{destination}-ലേക്ക് ഞങ്ങൾ 6-അക്ക കോഡ് അയച്ചിട്ടുണ്ട്",
+    "otpPlaceholder": "123456",
+    "verifyOtp": "കോഡ് സ്ഥിരീകരിച്ച് തുടരുക",
+    "roleTitle": "നിങ്ങളുടെ അക്കൗണ്ട് തരം തിരഞ്ഞെടുക്കുക",
+    "roleAthlete": "കായികതാരം",
+    "roleAthleteDesc": "നിങ്ങളുടെ സ്ഥിരീകരിച്ച ഡിജിറ്റൽ സ്പോർട്സ് റെക്കോർഡ് നിർമ്മിക്കുക",
+    "roleOrgRep": "ഓർഗനൈസേഷൻ പ്രതിനിധി",
+    "roleOrgRepDesc": "നിങ്ങളുടെ ക്ലബ്ബിന്റെയോ അസോസിയേഷന്റെയോ നേട്ടങ്ങൾ സ്ഥിരീകരിക്കുക",
+    "resendOtp": "വീണ്ടും കോഡ് അയക്കുക",
+    "invalidOtp": "അസാധുവായ സ്ഥിരീകരണ കോഡ്. ദയവായി വീണ്ടും ശ്രമിക്കുക.",
+    "invalidContact": "സാധുവായ മൊബൈൽ നമ്പറോ ഇമെയിലോ നൽകുക."
+  }
+}

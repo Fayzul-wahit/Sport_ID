@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<meta content="mobile_tab" name="shell-type">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        overscroll-behavior: none;
+        font-family: 'Inter', sans-serif;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-[#F8F9FA] text-[#111827] flex flex-col min-h-screen antialiased">
+<!-- Simple Header / App Bar -->
+<header class="fixed top-0 w-full z-50 pt-safe bg-white/95 backdrop-blur-md border-b border-gray-100">
+<div class="h-16 px-5 flex items-center justify-between">
+<div class="flex items-center">
+<span class="text-[20px] font-bold text-[#111827] tracking-tight">Sports ID</span>
+</div>
+<div class="flex items-center gap-3">
+<!-- Language Switcher -->
+<div class="inline-flex items-center p-0.5 rounded-full bg-gray-100">
+<button class="px-2.5 py-1 rounded-full bg-white text-[#111827] shadow-sm text-[12px] font-semibold" type="button">EN</button>
+<button class="px-2 py-1 rounded-full text-gray-500 hover:text-gray-900 text-[12px] font-medium" type="button">தமிழ்</button>
+<button class="px-2 py-1 rounded-full text-gray-500 hover:text-gray-900 text-[12px] font-medium" type="button">മല</button>
+</div>
+<!-- Profile Avatar -->
+<a class="flex items-center justify-center rounded-full ring-2 ring-transparent focus:outline-none" href="#">
+<img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VWfpsFOkaLbDu-nOX9v0t0R9BnMs3s0kZi-7gSq4v695qVU_YVIJqQ8vv6lyYFUmNbaVob89ekrjJMe0thRoBqI8CB8ExPlAaXSBS5S2JuxrJw5tTlEHKdsfFP6URIrCalXQTT33oIx_2x-7zL6tdo_R5EqpSm5Q4Q-n1KGDvtW-umc0NI5Yc8M2wBwWkVcdEwJvFz-Dr-PnozUdKjMv4ZxCQU9OWbHHZN5Bz1e8l5XFiLELpBt7zQX_0">
+</a>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col w-full pt-[76px] pb-24 px-5">
+<!-- Success Milestone Header (Left-aligned) -->
+<div class="pt-4 mb-6">
+<h1 class="text-[26px] leading-[32px] font-bold text-[#111827] tracking-tight">Your Sports ID is ready</h1>
+<p class="text-[16px] leading-[24px] text-gray-500 mt-1">Your digital sports identity has been created.</p>
+</div>
+<!-- Simplified Sports ID Card -->
+<div class="w-full bg-white rounded-2xl border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.05)] p-5">
+<!-- Athlete Profile Header -->
+<div class="flex items-start gap-4">
+<img alt="Arun Kumar" class="w-20 h-20 rounded-xl object-cover shrink-0 bg-gray-100" src="https://lh3.googleusercontent.com/aida/AEtjO1VWfpsFOkaLbDu-nOX9v0t0R9BnMs3s0kZi-7gSq4v695qVU_YVIJqQ8vv6lyYFUmNbaVob89ekrjJMe0thRoBqI8CB8ExPlAaXSBS5S2JuxrJw5tTlEHKdsfFP6URIrCalXQTT33oIx_2x-7zL6tdo_R5EqpSm5Q4Q-n1KGDvtW-umc0NI5Yc8M2wBwWkVcdEwJvFz-Dr-PnozUdKjMv4ZxCQU9OWbHHZN5Bz1e8l5XFiLELpBt7zQX_0">
+<div class="flex flex-col min-w-0 flex-1 pt-0.5">
+<h2 class="text-[22px] font-bold text-[#111827] leading-tight truncate">Arun Kumar</h2>
+<span class="text-[16px] text-gray-600 mt-1">Kabaddi • Raider</span>
+<span class="text-[14px] text-gray-500 mt-1">Coimbatore, Tamil Nadu</span>
+</div>
+</div>
+<!-- Sports ID Identifier Row with Copy Button -->
+<div class="mt-5 bg-gray-50 rounded-xl p-3.5 flex items-center justify-between">
+<div class="flex flex-col min-w-0 pr-2">
+<span class="text-[12px] uppercase font-semibold tracking-wider text-gray-400">Sports ID</span>
+<span class="text-[16px] font-bold text-[#111827] font-mono tracking-wide truncate" id="sports-id-val">ATH-2026-018472</span>
+</div>
+<button class="h-9 w-9 rounded-lg bg-white border border-gray-200 flex items-center justify-center text-gray-600 hover:text-gray-900 hover:border-gray-300 transition-colors active:scale-95 shadow-sm shrink-0" id="copy-btn" title="Copy Sports ID" type="button">
+<span class="material-symbols-outlined text-[18px]" id="copy-icon">content_copy</span>
+</button>
+</div>
+<!-- Clean QR Code Container -->
+<div class="mt-5 pt-4 border-t border-gray-100 flex flex-col items-center justify-center">
+<div class="w-36 h-36 p-2 bg-white rounded-xl flex items-center justify-center">
+<svg class="w-full h-full text-[#111827]" fill="currentColor" viewBox="0 0 29 29">
+<!-- Corner Finder 1 (Top-Left) -->
+<rect height="7" width="7" x="0" y="0"></rect>
+<rect fill="#ffffff" height="5" width="5" x="1" y="1"></rect>
+<rect height="3" width="3" x="2" y="2"></rect>
+<!-- Corner Finder 2 (Top-Right) -->
+<rect height="7" width="7" x="22" y="0"></rect>
+<rect fill="#ffffff" height="5" width="5" x="23" y="1"></rect>
+<rect height="3" width="3" x="24" y="2"></rect>
+<!-- Corner Finder 3 (Bottom-Left) -->
+<rect height="7" width="7" x="0" y="22"></rect>
+<rect fill="#ffffff" height="5" width="5" x="1" y="23"></rect>
+<rect height="3" width="3" x="2" y="24"></rect>
+<!-- Data pattern modules -->
+<rect height="2" width="2" x="8" y="2"></rect>
+<rect height="2" width="2" x="12" y="1"></rect>
+<rect height="1" width="2" x="15" y="3"></rect>
+<rect height="3" width="1" x="19" y="1"></rect>
+<rect height="2" width="2" x="9" y="5"></rect>
+<rect height="2" width="3" x="2" y="9"></rect>
+<rect height="2" width="1" x="6" y="8"></rect>
+<rect height="3" width="3" x="9" y="9"></rect>
+<rect height="3" width="2" x="14" y="8"></rect>
+<rect height="2" width="3" x="17" y="10"></rect>
+<rect height="1" width="2" x="22" y="8"></rect>
+<rect height="2" width="3" x="25" y="10"></rect>
+<rect height="3" width="2" x="9" y="13"></rect>
+<rect height="3" width="3" x="13" y="13"></rect>
+<rect height="2" width="2" x="18" y="14"></rect>
+<rect height="3" width="2" x="22" y="12"></rect>
+<rect height="2" width="2" x="25" y="14"></rect>
+<rect height="2" width="3" x="8" y="18"></rect>
+<rect height="3" width="2" x="12" y="18"></rect>
+<rect height="2" width="4" x="16" y="18"></rect>
+<rect height="3" width="2" x="21" y="17"></rect>
+<rect height="2" width="3" x="9" y="22"></rect>
+<rect height="2" width="2" x="13" y="23"></rect>
+<rect height="3" width="3" x="17" y="22"></rect>
+<rect height="2" width="4" x="22" y="21"></rect>
+<rect height="3" width="4" x="23" y="25"></rect>
+<rect height="3" width="2" x="10" y="25"></rect>
+</svg>
+</div>
+</div>
+</div>
+<!-- Actions Below Card -->
+<div class="w-full mt-6">
+<!-- Primary Action -->
+<a class="w-full h-14 bg-[#FF6B1A] text-white font-semibold text-[16px] rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-[#FF6B1A]/20 hover:opacity-95 active:scale-[0.98] transition-all" href="{{DATA:SCREEN:SCREEN_18}}"><span class="material-symbols-outlined text-[20px]">add</span><span class="">Add Achievement</span></a>
+<!-- Secondary Outline Action -->
+<button class="w-full h-14 mt-3 bg-white border border-gray-200 text-gray-700 font-semibold text-[16px] rounded-2xl flex items-center justify-center gap-2 hover:bg-gray-50 active:scale-[0.98] transition-all" id="share-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span class="">Share Sports ID</span>
+</button>
+</div>
+</main>
+<!-- Toast Notification -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 bg-[#111827] text-white text-[14px] px-4 py-2 rounded-full shadow-lg flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-3" id="toast">
+<span class="material-symbols-outlined text-green-400 text-[18px]">check_circle</span>
+<span id="toast-text" class="">Sports ID copied</span>
+</div>
+<!-- Standard Bottom Navigation Tab Bar -->
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-white border-t border-gray-100 shadow-[0_-2px_10px_rgba(0,0,0,0.03)]">
+<div class="flex justify-between items-center h-16 px-2">
+<a class="flex flex-1 flex-col items-center justify-center min-h-[44px] py-1 text-gray-500 hover:text-gray-900 transition-colors" href="{{DATA:SCREEN:SCREEN_22}}">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="text-[12px] font-medium mt-0.5">Home</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center min-h-[44px] py-1 text-[#FF6B1A] font-semibold transition-colors" href="{{DATA:SCREEN:SCREEN_24}}">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">badge</span>
+<span class="text-[12px] font-semibold mt-0.5">Sports ID</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center min-h-[44px] py-1 text-gray-500 hover:text-gray-900 transition-colors" href="{{DATA:SCREEN:SCREEN_12}}">
+<span class="material-symbols-outlined text-[24px]">explore</span>
+<span class="text-[12px] font-medium mt-0.5">Discover</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center min-h-[44px] py-1 text-gray-500 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">emoji_events</span>
+<span class="text-[12px] font-medium mt-0.5">Opportunities</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center min-h-[44px] py-1 text-gray-500 hover:text-gray-900 transition-colors" href="#">
+<span class="material-symbols-outlined text-[24px]">grid_view</span>
+<span class="text-[12px] font-medium mt-0.5">More</span>
+</a>
+</div>
+</nav>
+<script>
+    const copyBtn = document.getElementById('copy-btn');
+    const copyIcon = document.getElementById('copy-icon');
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+    const shareBtn = document.getElementById('share-btn');
+
+    function showToast(msg) {
+      if (!toast) return;
+      toastText.textContent = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 2000);
+    }
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const idText = "ATH-2026-018472";
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(idText).catch(() => {});
+        }
+        if (copyIcon) {
+          copyIcon.textContent = 'check';
+          setTimeout(() => { copyIcon.textContent = 'content_copy'; }, 1500);
+        }
+        showToast('Sports ID copied: ' + idText);
+      });
+    }
+
+    if (shareBtn) {
+      shareBtn.addEventListener('click', () => {
+        if (navigator.share) {
+          navigator.share({
+            title: 'Sports ID - Arun Kumar',
+            text: 'Sports ID: ATH-2026-018472 (Kabaddi • Raider)',
+            url: window.location.href
+          }).catch(() => {});
+        } else {
+          showToast('Share link ready');
+        }
+      });
+    }
+  </script>
+
+
+</body></html>

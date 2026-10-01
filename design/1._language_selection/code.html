@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<meta content="mobile_blank" name="shell-type">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 16px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 16px);
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-[#F9FAFB] text-[#111827] flex flex-col min-h-screen pt-safe pb-safe antialiased">
+<main class="flex-1 flex flex-col justify-between w-full max-w-md mx-auto px-5">
+<!-- Top Content Area -->
+<div class="flex flex-col w-full">
+<!-- Friendly Top Illustration (Clean & Simple) -->
+<div class="w-full flex items-center justify-center pt-4 pb-6">
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="absolute inset-0 w-full h-full text-gray-200" fill="none" viewBox="0 0 160 160">
+<circle class="opacity-60" cx="80" cy="80" r="70" stroke="currentColor" stroke-dasharray="6 6" stroke-width="3"></circle>
+</svg>
+<svg class="w-24 h-24 relative z-10" fill="none" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+<circle class="fill-orange-50" cx="70" cy="70" r="60"></circle>
+<!-- Motion Lines -->
+<path d="M26 84H42M20 92H38M30 100H44" stroke="#FF6B1A" stroke-linecap="round" stroke-width="3"></path>
+<!-- Head & Cap -->
+<circle class="fill-[#111827]" cx="76" cy="38" r="13"></circle>
+<path class="fill-[#FF6B1A]" d="M68 28C73 24 88 24 94 30C98 34 86 36 74 36Z"></path>
+<!-- Torso -->
+<path class="fill-[#111827]" d="M63 54C63 50 68 48 74 48C80 48 85 50 85 54L83 80C83 83 79 86 74 86C69 86 65 83 65 80L63 54Z"></path>
+<path class="fill-[#FF6B1A]" d="M72 52H76L75 74H73L72 52Z"></path>
+<!-- Arms -->
+<path d="M64 56L46 67C43 69 43 73 46 75L53 79" stroke="#111827" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"></path>
+<path d="M84 56L100 62C104 63 105 67 102 70L93 78" stroke="#111827" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"></path>
+<!-- Legs -->
+<path d="M68 82L54 96C51 99 50 104 53 108L60 114" stroke="#111827" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"></path>
+<path d="M79 82L92 93C96 97 101 97 105 94L118 86" stroke="#FF6B1A" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"></path>
+<ellipse class="fill-[#111827]" cx="62" cy="116" rx="6" ry="3.5"></ellipse>
+<ellipse class="fill-[#111827]" cx="120" cy="85" rx="6" ry="3.5"></ellipse>
+</svg>
+</div>
+</div>
+<!-- Left-aligned Header -->
+<div class="mb-6 text-left">
+<h1 class="text-[26px] font-bold text-[#111827] leading-tight tracking-tight">
+          Choose your language
+        </h1>
+<p class="text-[16px] text-gray-500 mt-2 leading-relaxed">
+          Select your preferred language to begin your athlete profile
+        </p>
+</div>
+<!-- Language Selection Cards (8px grid spacing / gap-2) -->
+<div aria-label="Choose Language" class="flex flex-col gap-2 w-full" id="language-group" role="radiogroup">
+<!-- Option 1: English (Selected Default) -->
+<div aria-checked="true" class="lang-card relative flex items-center justify-between p-4 rounded-2xl cursor-pointer transition-all border-2 border-[#FF6B1A] bg-white" id="option-en" onclick="selectLanguage('en')" role="radio" tabindex="0">
+<div class="flex flex-col text-left">
+<span class="text-[16px] font-semibold text-[#111827]">English</span>
+<span class="text-[14px] text-gray-500 mt-0.5">Default language • All India</span>
+</div>
+<div class="radio-state flex items-center justify-center w-6 h-6 rounded-full bg-[#FF6B1A] text-white">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<!-- Option 2: Tamil -->
+<div aria-checked="false" class="lang-card relative flex items-center justify-between p-4 rounded-2xl cursor-pointer transition-all border border-gray-200 bg-white" id="option-ta" onclick="selectLanguage('ta')" role="radio" tabindex="0">
+<div class="flex flex-col text-left">
+<span class="text-[16px] font-semibold text-[#111827]">தமிழ்</span>
+<span class="text-[14px] text-gray-500 mt-0.5">தமிழ்நாடு</span>
+</div>
+<div class="radio-state flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 bg-transparent text-transparent">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+<!-- Option 3: Malayalam -->
+<div aria-checked="false" class="lang-card relative flex items-center justify-between p-4 rounded-2xl cursor-pointer transition-all border border-gray-200 bg-white" id="option-ml" onclick="selectLanguage('ml')" role="radio" tabindex="0">
+<div class="flex flex-col text-left">
+<span class="text-[16px] font-semibold text-[#111827]">മലയാളം</span>
+<span class="text-[14px] text-gray-500 mt-0.5">കേരളം</span>
+</div>
+<div class="radio-state flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 bg-transparent text-transparent">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Actions Area -->
+<div class="flex flex-col pt-6 pb-2">
+<a href="{{DATA:SCREEN:SCREEN_28}}" id="submit-btn" class="w-full h-14 rounded-2xl bg-[#FF6B1A] text-white font-semibold text-[16px] flex items-center justify-center transition-opacity active:opacity-90 cursor-pointer">Continue</a>
+<p class="text-center text-[14px] text-gray-400 mt-3">
+        You can change your language anytime from settings
+      </p>
+</div>
+</main>
+<script>
+    let selectedLang = 'en';
+
+    function selectLanguage(langCode) {
+      selectedLang = langCode;
+      const cardIds = ['en', 'ta', 'ml'];
+
+      cardIds.forEach(key => {
+        const card = document.getElementById('option-' + key);
+        const radio = card.querySelector('.radio-state');
+
+        if (key === langCode) {
+          card.setAttribute('aria-checked', 'true');
+          card.className = 'lang-card relative flex items-center justify-between p-4 rounded-2xl cursor-pointer transition-all border-2 border-[#FF6B1A] bg-white';
+          radio.className = 'radio-state flex items-center justify-center w-6 h-6 rounded-full bg-[#FF6B1A] text-white';
+        } else {
+          card.setAttribute('aria-checked', 'false');
+          card.className = 'lang-card relative flex items-center justify-between p-4 rounded-2xl cursor-pointer transition-all border border-gray-200 bg-white';
+          radio.className = 'radio-state flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 bg-transparent text-transparent';
+        }
+      });
+    }
+
+    function handleContinue() {
+      const btn = document.getElementById('submit-btn');
+      btn.classList.add('opacity-90', 'scale-[0.99]');
+      setTimeout(() => {
+        btn.classList.remove('opacity-90', 'scale-[0.99]');
+      }, 150);
+    }
+  </script>
+
+
+</body></html>

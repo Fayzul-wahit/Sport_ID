@@ -1,0 +1,42 @@
+{
+  "common": {
+    "appName": "Sports ID",
+    "language": "Language",
+    "english": "English",
+    "tamil": "தமிழ்",
+    "malayalam": "മലയാളം",
+    "continue": "Continue",
+    "submit": "Submit",
+    "back": "Back",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "logout": "Log Out"
+  },
+  "languageSelect": {
+    "title": "Select your language",
+    "subtitle": "Choose your preferred language for the Sports ID platform",
+    "enLabel": "English",
+    "taLabel": "தமிழ் (Tamil)",
+    "mlLabel": "മലയാളം (Malayalam)"
+  },
+  "auth": {
+    "title": "Welcome to Sports ID",
+    "subtitle": "Enter your mobile number or email to sign up or log in",
+    "emailOrPhoneLabel": "Mobile Number or Email",
+    "emailOrPhonePlaceholder": "e.g. +91 98765 43210 or athlete@example.com",
+    "sendOtp": "Send OTP Code",
+    "enterOtpTitle": "Enter Verification Code",
+    "enterOtpSubtitle": "We sent a 6-digit code to {destination}",
+    "otpPlaceholder": "123456",
+    "verifyOtp": "Verify Code & Continue",
+    "roleTitle": "Choose your account type",
+    "roleAthlete": "Athlete",
+    "roleAthleteDesc": "Build your verified digital sports record",
+    "roleOrgRep": "Organization Representative",
+    "roleOrgRepDesc": "Verify sports achievements for your club or association",
+    "resendOtp": "Resend Code",
+    "invalidOtp": "Invalid verification code. Please try again.",
+    "invalidContact": "Please enter a valid mobile number or email."
+  }
+}
